@@ -90,7 +90,7 @@ const Contact = () => {
 
                     <p className="mb-2 font-bold ">
                     <a
-                      href="https://www.linkedin.com/in/ethereumblockchaindeveloper/"
+                      href="https://www.linkedin.com/in/0xZulkefal/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:text-blue-600 underline"

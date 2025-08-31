@@ -1,13 +1,10 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { PROJECTS } from "../constants";
 import { GrView } from "react-icons/gr";
 
 const AllProjects = () => {
-  const [selectedCategory, setSelectedCategory] = useState("Dapps");
-
   const filteredProjects = PROJECTS.filter(
-    (project) => project.category === selectedCategory
+    (project) => project.category === "Smart Contracts"
   );
 
   return (
@@ -21,28 +18,6 @@ const AllProjects = () => {
         >
           Projects
         </motion.h1>
-        <div>
-          <div className="mb-8 flex flex-wrap lg:justify-center">
-            <div className=" bg-gray-500 rounded-2xl">
-              <ul className="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-100">
-                {["Dapps", "Smart Contracts", "ReactJS"].map((category) => (
-                  <li className="me-2" key={category}>
-                    <a
-                      className={`inline-block px-4 py-3 rounded-lg ${
-                        selectedCategory === category
-                          ? "text-white bg-purple-800"
-                          : "hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white"
-                      }`}
-                      onClick={() => setSelectedCategory(category)}
-                    >
-                      {category}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mb-2">
           {filteredProjects.map((project, index) => (
             <motion.div
