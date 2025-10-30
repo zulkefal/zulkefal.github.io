@@ -40,6 +40,83 @@ export const EXPERIENCES = [
   }
 ];
 
+export const CERTIFICATES = [
+  {
+    date: "31 July, 2023",
+    name: "Decentralized Applications (Dapps)",
+    organization: "Coursera",
+    link: "https://www.coursera.org/verify/PD58DQ9J4AWH",
+  },
+  {
+    date: "13 Feb, 2023",
+    name: "Smart Contracts",
+    organization: "Coursera",
+    link: "https://www.coursera.org/verify/WWV9X448KFLU",
+  },
+  {
+    date: "21 August, 2022",
+    name: "Blockchain Basics",
+    organization: "Coursera",
+    link: "https://www.coursera.org/account/accomplishments/verify/GNVY35MQ7GFN",
+  },
+  {
+    date: "01 April, 2022",
+    name: "Blockchain Essentials",
+    organization: "IBM",
+    link: "https://courses.cognitiveclass.ai/certificates/4fb1518c26d84a97b1ad32961ad61bd7",
+  },
+  // Add more entries as needed.
+];
+
+export const VOLUNTEERING = [
+  // Populate with { title, date, highlights, link }
+  {
+    title: "Smart Contract Auditor • Cyfrin CodeHawks",
+    date: "2023 - Present",
+    highlights: [
+      "Analyzed production-grade Solidity codebases for security vulnerabilities across multiple CodeHawks contests.",
+      "Dating App Audit: Reported four valid issues impacting state integrity and authorization; fixes shipped by maintainers.",
+      "Christmas Dinner Audit: Flagged a critical re-entrancy risk and missing validation, recommending hardened control flow.",
+    ],
+  },
+  {
+    title: "Slotchain • BaseChain Hackathon",
+    date: "Oct 2023",
+    highlights: [
+      "Built an appointment booking dApp that mints NFTs as proof of scheduled sessions.",
+      "Implemented on-chain payments with smart contracts and persisted booking metadata via IPFS.",
+      "Enabled NFT-gated access to meetings for verified participants.",
+    ],
+    link: "https://slotchain-app.vercel.app/",
+  },
+  {
+    title: "President • Air University Freelancing Society (AUFS)",
+    date: "Sep 2021 - Jun 2023",
+    highlights: [
+      "Founded a student community focused on freelancing skill development and collaboration.",
+      "Organized workshops, knowledge-sharing circles, and mentorship programs to uplift members.",
+      "Scaled membership and operational processes to support recurring events and partnerships.",
+    ],
+  },
+  {
+    title: "Technical Team Member • Google Developer Student Clubs",
+    date: "Aug 2022 - Aug 2023",
+    highlights: [
+      "Coordinated technical workshops and campus events covering web, and blockchain topics.",
+      "Managed event logistics, demos, and post-session resources to drive continued learning.",
+    ],
+  },
+];
+
+export const PUBLICATIONS = [
+  // Populate with { title, link, description }
+  {
+    title: "A Blockchain-Based Framework for Issuance and Verification of Degrees as Non-Fungible Tokens (Under Review) ",
+    description: "Proposed a blockchain framework for issuing and verifying academic degrees as NFTs to eliminate manual verification by the Higher Education Commission (HEC). The system ensures tamper-proof, transparent, and instantly verifiable academic records, reducing administrative costs and preventing counterfeit degrees.",
+    link: "https://www.overleaf.com/read/rbbnmpwgnndx#a1bd5b",
+  },
+];
+
 export const PROJECTS = [
   {
     title: "Degree Issuance System",

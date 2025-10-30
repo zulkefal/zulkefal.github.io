@@ -4,9 +4,12 @@ import Education from "./components/Education";
 import Experience from "./components/Experience";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Certificates from "./components/Certificates";
 import Project from "./components/Project";
 import Skills from "./components/Skills";
 import AllProjects from "./components/AllProjects";
+import Publications from "./components/Publications";
+import Volunteering from "./components/Volunteering";
 
 
 const App = () => {
@@ -30,6 +33,11 @@ const App = () => {
           {/* <About /> */}
           {/* <Project /> */}
           <AllProjects />
+          <Publications />
+          <Certificates />
+          <Volunteering />
+
+
           <Contact/>
         </div>
       </div>

@@ -38,7 +38,7 @@ const textVariant = (duration) => ({
 const Skills = () => {
   return (
     <>
-      <div className="border-b border:neutral-800 pb-24">
+      <div className="border-b border-neutral-800 pb-24">
         <motion.h1
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
