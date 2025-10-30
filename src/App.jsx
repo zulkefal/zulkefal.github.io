@@ -10,6 +10,7 @@ import Skills from "./components/Skills";
 import AllProjects from "./components/AllProjects";
 import Publications from "./components/Publications";
 import Volunteering from "./components/Volunteering";
+import Honors from "./components/Honors";
 
 
 const App = () => {
@@ -35,6 +36,7 @@ const App = () => {
           <AllProjects />
           <Publications />
           <Certificates />
+          <Honors />
           <Volunteering />
 
 

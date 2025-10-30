@@ -42,7 +42,7 @@ const Volunteering = () => {
                 href={item.link}
                 target="_blank"
                 rel="noreferrer"
-                className="text-sm text-purple-400 hover:text-purple-300"
+                className="text-lg text-purple-400 hover:text-purple-300 self-center text-center"
               >
                 View
               </a>

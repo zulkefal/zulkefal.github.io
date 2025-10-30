@@ -68,6 +68,23 @@ export const CERTIFICATES = [
   // Add more entries as needed.
 ];
 
+export const HONORS_AND_AWARDS = [
+  {
+    date: "8 October, 2022",
+    title: "Business Idea Winner ",
+    institute: "Air University Aerospace and Aviation Campus Kamra",
+    description:
+      "Proposed and presented a blockchain-based framework for managing university financial operations, focusing on transparency and automation. Awarded 1st position for demonstrating innovation and real-world feasibility.",
+  },
+  {
+    date: "21 September, 2022",
+    title: "Academic Excellence",
+    institute: "Air University Aerospace and Aviation Campus Kamra",
+    description:
+      "Awarded Air University Kamra Merit Scholarship twice for securing 2nd position during Bachelor’s program.",
+  },
+];
+
 export const VOLUNTEERING = [
   // Populate with { title, date, highlights, link }
   {
