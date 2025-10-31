@@ -53,7 +53,7 @@ const Hero = () => {
             download="Zulkefal_Resume.pdf"
           >
             <span className="p-2 text-white font-bold text-xl rounded-s-sm bg-purple-800 hover:text-yellow-500 border ">
-              Download CV
+              Resume
             </span>
           </a>
           </div>
