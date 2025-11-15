@@ -16,7 +16,7 @@ const Navbar = () => {
         <img className='mx-2 w-20' src={logo} alt="logo" />
     </div>
     <div className='m-8 flex items-center justify-center gap-4 text-2xl'>
-        <a href="https://www.linkedin.com/in/ethereumblockchaindeveloper/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+        <a href="https://www.linkedin.com/in/0xzulkefal/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
             <FaLinkedin />
         </a>
         <a href="https://www.github.com/zulkefal" target="_blank" rel="noopener noreferrer" className="hover:text-gray-600">
