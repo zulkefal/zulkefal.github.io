@@ -1,14 +1,31 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { RiReactjsLine } from "react-icons/ri";
-import { DiJavascript1 } from "react-icons/di";
-import { FaNodeJs } from "react-icons/fa";
-import { SiMongodb } from "react-icons/si";
-import { DiHtml5 } from "react-icons/di";
-import { DiCss3 } from "react-icons/di";
-import { SiSolidity } from "react-icons/si";
-import { FaEthereum } from "react-icons/fa";
-import { animate, motion } from "framer-motion";
-import { FaRust } from "react-icons/fa";
+import { FaNodeJs, FaEthereum, FaPython } from "react-icons/fa";
+import {
+  SiSolidity,
+  SiTypescript,
+  SiNestjs,
+  SiLangchain,
+  SiOpenzeppelin,
+  SiGraphql,
+} from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+import { SKILL_GROUPS } from "../constants";
+
+const ICONS = [
+  { label: "Solidity", Icon: SiSolidity, color: "text-gray-300", duration: 6 },
+  { label: "Ethereum", Icon: FaEthereum, color: "text-gray-400", duration: 2.5 },
+  { label: "NodeJS", Icon: FaNodeJs, color: "text-green-400", duration: 5 },
+  { label: "TypeScript", Icon: SiTypescript, color: "text-blue-400", duration: 3 },
+  { label: "NestJS", Icon: SiNestjs, color: "text-red-500", duration: 4 },
+  { label: "GraphQL", Icon: SiGraphql, color: "text-pink-400", duration: 3.5 },
+  { label: "Python", Icon: FaPython, color: "text-yellow-300", duration: 4.5 },
+  { label: "LangChain", Icon: SiLangchain, color: "text-emerald-300", duration: 3 },
+  { label: "OpenZeppelin", Icon: SiOpenzeppelin, color: "text-sky-300", duration: 5 },
+  { label: "ReactJS", Icon: RiReactjsLine, color: "text-cyan-400", duration: 2.5 },
+  { label: "C#", Icon: TbBrandCSharp, color: "text-purple-400", duration: 4 },
+];
 
 const iconsVariant = (duration) => ({
   initial: { y: -10 },
@@ -53,170 +70,52 @@ const Skills = () => {
           transition={{ duration: 1.5 }}
           className="flex flex-wrap items-center justify-center gap-4"
         >
-          <div>
-            <motion.div
-              variants={iconsVariant(2.5)}
-              initial="initial"
-              animate="animate"
-              className="rounded-2xl border-4 border-neutral-800 p-4"
-            >
-              <RiReactjsLine className="text-7xl text-cyan-400" />
-            </motion.div>
-            <motion.h1
-              className="flex flex-wrap items-center justify-center gap-4"
-              variants={textVariant(2.5)}
-              initial="initial"
-              animate="animate"
-            >
-              ReactJS
-            </motion.h1>
-          </div>
-          <div>
-            <motion.div
-              variants={iconsVariant(3)}
-              initial="initial"
-              animate="animate"
-              className="rounded-2xl border-4 border-neutral-800 p-4"
-            >
-              <DiJavascript1 className="text-7xl text-yellow-400	" />
-            </motion.div>
-            <motion.h1
-              className="flex flex-wrap items-center justify-center gap-4"
-              variants={textVariant(3)}
-              initial="initial"
-              animate="animate"
-            >
-              Javascript
-            </motion.h1>
-          </div>
-          <div>
-            <motion.div
-              variants={iconsVariant(5)}
-              initial="initial"
-              animate="animate"
-              className="rounded-2xl border-4 border-neutral-800 p-4"
-            >
-              <FaNodeJs className="text-7xl text-green-400" />
-            </motion.div>
-            <motion.h1
-              className="flex flex-wrap items-center justify-center gap-4"
-              variants={textVariant(5)}
-              initial="initial"
-              animate="animate"
-            >
-              NodeJS
-            </motion.h1>
-          </div>
+          {ICONS.map(({ label, Icon, color, duration }) => (
+            <div key={label}>
+              <motion.div
+                variants={iconsVariant(duration)}
+                initial="initial"
+                animate="animate"
+                className="rounded-2xl border-4 border-neutral-800 p-4"
+              >
+                <Icon className={`text-7xl ${color}`} />
+              </motion.div>
+              <motion.h1
+                className="flex flex-wrap items-center justify-center gap-4 text-sm"
+                variants={textVariant(duration)}
+                initial="initial"
+                animate="animate"
+              >
+                {label}
+              </motion.h1>
+            </div>
+          ))}
+        </motion.div>
 
-          <div>
-            <motion.div
-              variants={iconsVariant(2)}
-              initial="initial"
-              animate="animate"
-              className="rounded-2xl border-4 border-neutral-800 p-4"
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          transition={{ duration: 1 }}
+          className="mt-20 grid gap-6 md:grid-cols-2"
+        >
+          {SKILL_GROUPS.map((group) => (
+            <div
+              key={group.title}
+              className="rounded-2xl border border-neutral-800 bg-neutral-900/30 p-5"
             >
-              <DiHtml5 className="text-7xl text-orange-400" />
-            </motion.div>
-            <motion.h1
-              className="flex flex-wrap items-center justify-center gap-4"
-              variants={textVariant(3)}
-              initial="initial"
-              animate="animate"
-            >
-              HTML
-            </motion.h1>
-          </div>
-
-          <div>
-            <motion.div
-              variants={iconsVariant(6)}
-              initial="initial"
-              animate="animate"
-              className="rounded-2xl border-4 border-neutral-800 p-4"
-            >
-              <SiSolidity className="text-7xl text-gray-400" />
-            </motion.div>
-            <motion.h1
-              className="flex flex-wrap items-center justify-center gap-4"
-              variants={textVariant(6)}
-              initial="initial"
-              animate="animate"
-            >
-              Solidity
-            </motion.h1>
-          </div>
-          <div>
-            <motion.div
-              variants={iconsVariant(4)}
-              initial="initial"
-              animate="animate"
-              className="rounded-2xl border-4 border-neutral-800 p-4"
-            >
-              <SiMongodb className="text-7xl text-green-400" />
-            </motion.div>
-            <motion.h1
-              className="flex flex-wrap items-center justify-center gap-4"
-              variants={textVariant(4)}
-              initial="initial"
-              animate="animate"
-            >
-              MongoDb
-            </motion.h1>
-          </div>
-          <div>
-            <motion.div
-              variants={iconsVariant(2.5)}
-              initial="initial"
-              animate="animate"
-              className="rounded-2xl border-4 border-neutral-800 p-4"
-            >
-              <FaEthereum className="text-7xl text-gray-400" />
-            </motion.div>
-            <motion.h1
-              className="flex flex-wrap items-center justify-center gap-4"
-              variants={textVariant(2.5)}
-              initial="initial"
-              animate="animate"
-            >
-              Ethereum
-            </motion.h1>
-          </div>
-          <div>
-            <motion.div
-              variants={iconsVariant(4)}
-              initial="initial"
-              animate="animate"
-              className="rounded-2xl border-4 border-neutral-800 p-4"
-            >
-              <DiCss3 className="text-7xl text-blue-400" />
-            </motion.div>
-            <motion.h1
-              className="flex flex-wrap items-center justify-center gap-4"
-              variants={textVariant(4)}
-              initial="initial"
-              animate="animate"
-            >
-              Css
-            </motion.h1>
-          </div>
-          <div>
-            <motion.div
-              variants={iconsVariant(4)}
-              initial="initial"
-              animate="animate"
-              className="rounded-2xl border-4 border-neutral-800 p-4"
-            >
-              <FaRust className="text-7xl text-gray-400" />
-            </motion.div>
-            <motion.h1
-              className="flex flex-wrap items-center justify-center gap-4"
-              variants={textVariant(4)}
-              initial="initial"
-              animate="animate"
-            >
-              Rust
-            </motion.h1>
-          </div>
+              <h6 className="mb-3 font-semibold text-yellow-400">{group.title}</h6>
+              <div className="flex flex-wrap gap-2">
+                {group.items.map((item) => (
+                  <span
+                    key={item}
+                    className="rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-300"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </motion.div>
       </div>
     </>

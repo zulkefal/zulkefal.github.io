@@ -37,7 +37,15 @@ const Education = () => {
                 {degreeDetails.session}
               </span>
             </h6>
-            <p className="mb-4 text-yellow-500">Cgpa: {degreeDetails.cgpa}</p>
+            <p className="mb-4 text-yellow-500">CGPA: {degreeDetails.cgpa}</p>
+            {degreeDetails.fyp && (
+              <p className="mx-auto mb-2 max-w-2xl text-base text-neutral-300">
+                {degreeDetails.fyp}
+              </p>
+            )}
+            {degreeDetails.english && (
+              <p className="text-sm text-neutral-400">{degreeDetails.english}</p>
+            )}
 
             {/* <span className="mr-2 mt-4 rounded bg-neutral-900 px-2 py-1 text-sm font-medium text-purple-400">
               {degreeDetails.uniName}

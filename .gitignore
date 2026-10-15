@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Separate project accidentally placed inside src (contains .env and credentials)
+src/the-innner-circle/

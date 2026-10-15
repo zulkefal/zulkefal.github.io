@@ -29,14 +29,16 @@ const Certificates = () => {
             <h6 className="mb-4 text-lg font-semibold text-neutral-100">
               {certificate.name}
             </h6>
-            <a
-              href={certificate.link}
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm text-purple-400 hover:text-purple-300"
-            >
-              Verify Certificate
-            </a>
+            {certificate.link && (
+              <a
+                href={certificate.link}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm text-purple-400 hover:text-purple-300"
+              >
+                Verify Certificate
+              </a>
+            )}
           </motion.div>
         ))}
       </div>
